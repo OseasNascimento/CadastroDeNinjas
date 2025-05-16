@@ -1,7 +1,10 @@
-package nascimento.aula.CadastrodeNinjas;
+package nascimento.aula.CadastrodeNinjas.Ninjas;
 
 
 import jakarta.persistence.*;
+import nascimento.aula.CadastrodeNinjas.Missoes.MissoesModel;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -10,9 +13,17 @@ public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
+
     private String email;
+
     private int idade;
+
+    //@ManyToOne um ninja tem uma unica missão
+    @ManyToOne
+    @JoinColumn(name = "missoes_id") //Foreing Key ou chave estrangeira
+    private MissoesModel missoes;
 
     public NinjaModel() {
     }

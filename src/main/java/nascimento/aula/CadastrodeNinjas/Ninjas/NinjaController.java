@@ -1,4 +1,4 @@
-package nascimento.aula.CadastrodeNinjas;
+package nascimento.aula.CadastrodeNinjas.Ninjas;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
